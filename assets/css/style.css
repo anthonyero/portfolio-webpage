@@ -1,0 +1,67 @@
+:root {
+    --gray-background-color: rgb(55, 56, 66);
+    --light-blue-text-color: rgb(153, 225, 225);
+    --dark-blue-text-color:  rgb(43, 54, 138);
+    --light-gray-text-color: gray; 
+}
+
+
+* {
+    font-family: sans-serif;
+}
+header {
+display: flex;
+background-color: var(--gray-background-color);
+}
+
+h1 {
+display: flex;
+background-color: var(--light-blue-text-color);
+color: var(--gray-background-color);
+}
+
+nav {
+
+}
+
+nav ul{
+    /* Align this element with the height of the h1 heading */
+}
+
+nav li {
+    display: inline;
+
+}
+
+nav li a {
+    color: var(--light-blue-text-color);
+    font-size: larger;
+}
+
+
+.headshot { /* Not functioning as intended. Revisit*/
+    display: flex;
+    justify-content: center;
+}
+
+main section{
+    flex: ;
+}
+
+main section h2 {
+
+}
+
+h2 {
+    color: var(--dark-blue-text-color);
+}
+
+.about-me p {
+    color: var(--light-gray-text-color)
+}
+
+
+.project-sections { /* Flex container where we will implement a grid structure*/
+    flex: ;
+}
+
