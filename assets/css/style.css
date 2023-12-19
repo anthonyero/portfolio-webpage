@@ -11,7 +11,11 @@
 }
 header {
 display: flex;
+align-items: center;
+justify-content: space-between; /* This puts the header elements on opposite sides. In this case, h1 and nav */
+padding: 1%;
 background-color: var(--gray-background-color);
+width: 100%;
 }
 
 h1 {
@@ -21,21 +25,27 @@ color: var(--gray-background-color);
 }
 
 nav {
-
+    display: flex;
 }
 
-nav ul{
+nav ul {
     /* Align this element with the height of the h1 heading */
 }
 
 nav li {
     display: inline;
+    font-size: 20px;
+    padding: 1px;
+    
+    
 
 }
 
 nav li a {
     color: var(--light-blue-text-color);
     font-size: larger;
+    text-decoration: underline;
+    text-decoration-thickness: 6px;
 }
 
 
@@ -44,8 +54,12 @@ nav li a {
     justify-content: center;
 }
 
+main {
+    display: block
+}
+
 main section{
-    flex: ;
+    display: inline;
 }
 
 main section h2 {
@@ -54,14 +68,47 @@ main section h2 {
 
 h2 {
     color: var(--dark-blue-text-color);
+    border-right-color: var(--dark-blue-text-color);
+    border-right: 2px solid;
+    padding: 2%;
+    font-size: 35px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+
+}
+
+.about-me {
+    display: flex;
+    flex-wrap: wrap;
+    text-wrap: wrap;
 }
 
 .about-me p {
-    color: var(--light-gray-text-color)
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--light-gray-text-color);
+    text-wrap: wrap;
 }
 
 
 .project-sections { /* Flex container where we will implement a grid structure*/
-    flex: ;
+    display: flex;
+    flex-wrap: wrap;
 }
 
+
+
+
+.contact-me {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--dark-blue-text-color)
+    
+}
