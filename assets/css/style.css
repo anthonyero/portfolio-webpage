@@ -68,6 +68,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
     height: fit-content;
     padding: 5%; /* Added padding to c */
@@ -76,8 +77,9 @@ main {
 .row {
     display: flex;
     /* align-items: center; Removed because it limited the border height */
-    justify-content: center;
-    width: 80%;
+    width: 96%;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
 }
 
 .row h2 {
@@ -95,6 +97,8 @@ main {
 }
 
 .about-me p {
+    display: flex;
+    flex-wrap: wrap; /* Allows the pargraph text of about me to wrap as dimensions change*/
     color: var(--light-gray-text-color);
     text-wrap: wrap;
 
