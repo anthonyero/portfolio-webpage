@@ -220,3 +220,37 @@ main {
     filter: saturate(100%)
 }
 
+
+@media screen and (max-width: 768px) { /* This size was chosen as it is the width of a smaller tablet (iPad Mini)*/
+
+    /* Place headers elements as block/stack */
+
+    header {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+  
+    /* Change to a vertical stack of the containers and their children elements */
+    .row {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    /* Removes the border on the right of the h2 container and places one on the bottom */
+    .row h2 {
+    border-right: 0cap;
+    border-bottom-color: var(--dark-blue-text-color);
+    border-bottom: 2px solid;
+    padding: 2%;
+    font-size: 35px;
+    }
+}
