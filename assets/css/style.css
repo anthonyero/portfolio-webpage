@@ -1,3 +1,4 @@
+
 :root {
     --gray-background-color: rgb(55, 56, 66);
     --light-blue-text-color: rgb(153, 225, 225);
@@ -8,20 +9,32 @@
 
 * {
     font-family: sans-serif;
+    box-sizing: border-box; /* This is supposed to let the border determinging */
+    /* Recommends maybe starting. Make CSS based on the wireframe */
 }
+
 header {
-display: flex;
-align-items: center;
-justify-content: space-between; /* This puts the header elements on opposite sides. In this case, h1 and nav */
-padding: 1%;
-background-color: var(--gray-background-color);
-width: 100%;
+    /* Layout */
+    display: flex;
+    align-items: baseline; /* Baseline aligns text height of child elements; previously used center instead */
+    justify-content: space-between; /* This puts the header elements on opposite sides. In this case, h1 and nav */
+    padding: 1%;
+    width: 100%;
+
+    /* Styling */
+    background-color: var(--gray-background-color);
+
 }
 
 h1 {
-display: flex;
-background-color: var(--light-blue-text-color);
-color: var(--gray-background-color);
+    /* Layout */
+    display: flex;
+    padding: 1px; /* Provides a bit of cushion along the side so name cut off isn't as sharp*/
+
+    /* Styling */
+    color: var(--gray-background-color);
+    background-color: var(--light-blue-text-color);
+
 }
 
 nav {
@@ -36,9 +49,6 @@ nav li {
     display: inline;
     font-size: 20px;
     padding: 1px;
-    
-    
-
 }
 
 nav li a {
@@ -55,60 +65,131 @@ nav li a {
 }
 
 main {
-    display: block
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    padding: 5%; /* Added padding to c */
 }
 
-main section{
-    display: inline;
+.row {
+    display: flex;
+    /* align-items: center; Removed because it limited the border height */
+    justify-content: center;
+    width: 80%;
 }
 
-main section h2 {
-
-}
-
-h2 {
+.row h2 {
     color: var(--dark-blue-text-color);
     border-right-color: var(--dark-blue-text-color);
     border-right: 2px solid;
     padding: 2%;
     font-size: 35px;
+    align-items: last baseline;
 }
 
-.row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 80%;
-
-}
 
 .about-me {
-    display: flex;
-    flex-wrap: wrap;
-    text-wrap: wrap;
+
 }
 
 .about-me p {
-    display: flex;
-    flex-wrap: wrap;
     color: var(--light-gray-text-color);
     text-wrap: wrap;
+
+    padding: 10px;
+}
+
+.work {
+    display: flex;
+    flex-wrap: wrap; /* These two lines allow the heading and content to shift as viewport width changes*/
 }
 
 
-.project-sections { /* Flex container where we will implement a grid structure*/
+.projects-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1%;
+    padding: 2%;
+}
+
+.main-project{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 300px;
+    padding: 2%;
+
+}
+
+.project-sections {
+    display:grid;
+    grid-template-columns: 200px 200px;
+    grid-row: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    position: center;
     flex-wrap: wrap;
 }
 
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap: 0px;
+}
 
+
+/* The rationale here is to turn the image itself into a container and then we can place the card-title and card-subtext on top of it*/
+/* Maybe I need to the placeholder image as a background image for the container */
+.card-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap: 0px;
+    width: fit-content;
+    height: fit-content;
+
+    flex-grow: 1; /* These lines of code were shared by the Xpert Learning Assistant when I aksed how to maximize the size of an image within a container using CSS flexbox */
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+/* Adds a background color and font-color. Also intends to piece the title and subtext together  */
+/* An option to adjust this may be to change title and subtext to one <p> with a line break */
+.card-title,
+.card-subtext {
+    /* Layout */
+    padding: 0px;   
+    margin: 0px;
+
+    /* Styling */
+    background-color: var(--light-blue-text-color);
+    color: var(--gray-background-color);
+}
 
 
 .contact-me {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    color: var(--dark-blue-text-color)
+    color: var(--dark-blue-text-color);
+    flex-wrap: wrap;
     
 }
+
+.row img {
+    border: 2px solid var(--light-blue-text-color);
+}
+
+.row img:hover,
+.project-sections img:hover {
+    filter: saturate(120%)
+}
+
