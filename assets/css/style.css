@@ -59,9 +59,11 @@ nav li a {
 }
 
 
-.headshot { /* Not functioning as intended. Revisit*/
+.headshot { 
     display: flex;
     justify-content: center;
+    padding: 1%;
+    margin: 0;
 }
 
 main {
@@ -129,6 +131,25 @@ main {
 
 }
 
+.main-project-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+}
+
+.main-project-image-text {
+      /* Layout */
+      padding: 0px;   
+      margin: 0%;
+      position: absolute; 
+  
+      /* Styling */
+      background-color: var(--light-blue-text-color);
+      color: var(--gray-background-color);
+}
+
 .project-sections {
     display:grid;
     grid-template-columns: 200px 200px;
@@ -162,16 +183,17 @@ main {
     flex-grow: 1; /* These lines of code were shared by the Xpert Learning Assistant when I aksed how to maximize the size of an image within a container using CSS flexbox */
     max-width: 100%;
     max-height: 100%;
+    position: relative; 
 
 }
 
 /* Adds a background color and font-color. Also intends to piece the title and subtext together  */
 /* An option to adjust this may be to change title and subtext to one <p> with a line break */
-.card-title,
-.card-subtext {
+.card-text {
     /* Layout */
     padding: 0px;   
-    margin: 0px;
+    margin: 0%;
+    position: absolute; 
 
     /* Styling */
     background-color: var(--light-blue-text-color);
@@ -189,7 +211,7 @@ main {
 }
 
 .row img {
-    border: 2px solid var(--light-blue-text-color);
+    border: 4px solid var(--light-blue-text-color);
     filter: grayscale(50%);
 }
 
