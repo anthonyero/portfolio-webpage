@@ -190,10 +190,11 @@ main {
 
 .row img {
     border: 2px solid var(--light-blue-text-color);
+    filter: grayscale(50%);
 }
 
 .row img:hover,
 .project-sections img:hover {
-    filter: saturate(120%)
+    filter: saturate(100%)
 }
 
