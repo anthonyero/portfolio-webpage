@@ -41,9 +41,6 @@ nav {
     display: flex;
 }
 
-nav ul {
-    /* Align this element with the height of the h1 heading */
-}
 
 nav li {
     display: inline;
@@ -98,7 +95,7 @@ main {
 .row {
     display: flex;
     /* align-items: center; Removed because it limited the border height */
-    width: 96%;
+    width: 100%;
     margin-left: -1.5rem;
     margin-right: -1.5rem;
 }
@@ -145,6 +142,7 @@ main {
     align-items: center;
     border: 1%;
     padding: 2%;
+    margin-left: 20%; /* At full scale, this shifts the project container that holds the main project and grid together */
 }
 
 .main-project{
@@ -251,11 +249,11 @@ are pushed below onto another line. As such, this is not ideal
 
 .row img:hover,
 .project-sections img:hover {
-    filter: saturate(100%)
+    filter: saturate(100%);
 }
 
-
-@media screen and (max-width: 768px) { /* This size was chosen as it is the width of a smaller tablet (iPad Mini)*/
+/* Media Query for devices wider than a phone but up to a small tablet*/ 
+@media screen and (min-width: 431px) and (max-width: 768px) { /* This size was chosen as it is the width of a smaller tablet (iPad Mini)*/
 
     /* Place headers elements as block/stack */
 
@@ -263,6 +261,7 @@ are pushed below onto another line. As such, this is not ideal
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        align-items: center; /* This moves the contents of the header to the center when the screen decreases */
     }
 
     nav ul {
@@ -271,7 +270,28 @@ are pushed below onto another line. As such, this is not ideal
         flex-wrap: wrap;
     }
 
-  
+    .about-me { /*  */
+        display: flex;
+        align-items: center;
+    }
+
+  /* I added this to push the work container to the left. 1.5% was through testing. A learning assistant suggested padding-right but this didn't really function on my end */ 
+    .work-heading {
+        display: flex;
+        justify-content: center;
+    }
+
+    .projects-container {
+        /* Based on the DevTools, it looks like we do not need to restate properties we want to keep the same. Removed display, flex-direction, etc.*/
+        margin-left: 8%; 
+    }
+
+
+    .main-project-image{
+        margin-left: 8%; /* This helped align the main project image so it was in between the grid*/
+    }
+
+
     /* Change to a vertical stack of the containers and their children elements */
     .row {
         display: flex;
@@ -284,7 +304,90 @@ are pushed below onto another line. As such, this is not ideal
     border-right: 0cap;
     border-bottom-color: var(--dark-blue-text-color);
     border-bottom: 2px solid;
-    padding: 2%;
-    font-size: 35px;
+    }
+
+    .contact-me p,
+    .contact-me a {
+        display: flex;
+        flex-direction:column;
+        flex-wrap: wrap;
+    }
+}
+
+
+/* Media query for a portrait orientation smart phone */
+@media screen and (max-width: 430px) { /* This size was chosen as it is the width of an iPhone 14 Pro Max)*/
+   /* Place headers elements as block/stack */
+
+   header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center; /* This moves the contents of the header to the center when teh screen decreases*/
+    }
+
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .about-me { /*  */
+        display: flex;
+        align-items: center;
+    }
+
+    .about-me p {
+        align-items: center;
+        padding-left: 20%; /* Shifts the paragraph to the right so it is approximately center */
+    }
+
+    .work {
+        padding-right: 15%;
+    }
+
+    /* I added this to push the work container to the left. 1.5% was through testing. A learning assistant suggested padding-right but this didn't really function on my end */ 
+    .work-heading {
+    display: flex;
+    justify-content: center;
+    }
+
+
+    .projects-container {
+    border: 1%;
+    padding-right: 2%;
+    margin-left: 8%;
+    }
+
+
+    .main-project{
+    display: flex;
+    justify-content: center;
+    }
+    
+
+    .main-project-image{
+    margin-left: 8%; /* This helped align the main project image so it was in between the grid*/
+    }
+/*
+    .project-sections {
+        padding-right: 8%;
+
+    }
+*/
+    /* Change to a vertical stack of the containers and their children elements */
+    .row {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    /* Removes the border on the right of the h2 container and places one on the bottom */
+    .row h2 {
+    border-right: 0cap;
+    border-bottom-color: var(--dark-blue-text-color);
+    border-bottom: 2px solid;
+    
     }
 }
