@@ -58,6 +58,25 @@ nav li a {
     text-decoration-thickness: 6px;
 }
 
+/* Referenced the hero */
+.banner {
+    height: 150px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/000/694/606/original/abstract-colorful-geometric-banner-template-background-vector.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* O
+.banner-text{
+    height: 100px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/000/694/606/original/abstract-colorful-geometric-banner-template-background-vector.jpg);
+    background-size: cover;
+    background-position: center;
+} */
 
 .headshot { 
     display: flex;
