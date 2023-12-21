@@ -45,7 +45,7 @@ nav {
 nav li {
     display: inline;
     font-size: 20px;
-    padding: 1px;
+    padding: 7px;
 }
 
 nav li a {
@@ -53,14 +53,15 @@ nav li a {
     font-size: larger;
     text-decoration: underline;
     text-decoration-thickness: 6px;
+    
 }
 
-/* Referenced the hero */
+/* Referenced the hero  from the accessible-webpage repository */
 .banner {
     height: 150px;
     width: 100%;
     margin-bottom: 25px;
-    background-image: url(https://static.vecteezy.com/system/resources/previews/000/694/606/original/abstract-colorful-geometric-banner-template-background-vector.jpg);
+    background-image: url(/assets/images/banner-image.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -111,7 +112,7 @@ main {
 
 /* Added to push the about-me heading to the right so they are inlined*/
 .about-me  h2 {
-    padding-left: 10%;
+    padding-left: 10.6%;
 
 }
 
@@ -130,9 +131,9 @@ main {
     padding-left: 8.25%;
 }
 
-/* I added this to push the work container to the left. 1.5% was through testing. A learning assistant suggested padding-right but this didn't really function on my end */ 
+/* I added this to push the work container to the left. 2.1% was through testing. A learning assistant suggested padding-right but this didn't really function on my end */ 
 .work-heading {
-    margin-left: 1.5%; 
+    margin-left: 2.1%; 
 }
 
 
@@ -231,8 +232,15 @@ main {
     align-items: center;
     color: var(--dark-blue-text-color);
     flex-wrap: wrap;
+
+
     
+    /* Although I wanted to implement an underline for these links, letters that have a component that would go under a line (Ex. p, q, y, g) break up the underline
+    font-size: larger;
+    text-decoration: underline;
+    text-decoration-thickness: 6px; */ 
 }
+
 /* While this does give the border the impression of lining up, 
 the heading element takes up so much space all other elements, the links, 
 are pushed below onto another line. As such, this is not ideal
@@ -251,6 +259,8 @@ are pushed below onto another line. As such, this is not ideal
 .project-sections img:hover {
     filter: saturate(100%);
 }
+
+
 
 /* Media Query for devices wider than a phone but up to a small tablet*/ 
 @media screen and (min-width: 431px) and (max-width: 768px) { /* This size was chosen as it is the width of a smaller tablet (iPad Mini)*/
