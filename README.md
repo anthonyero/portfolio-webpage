@@ -23,8 +23,9 @@ N/A
 
 The webpage has been published through GitHub pages and this project's files can be accessed through the following links:
 
-[Link to the published GitHub Page](https://anthonyero.github.io/portfolio-webpage/)
-[Link to the GitHub repository](https://github.com/anthonyero/portfolio-webpage")
+- [Link to the published GitHub Page](https://anthonyero.github.io/portfolio-webpage/)
+
+- [Link to the GitHub repository](https://github.com/anthonyero/portfolio-webpage")
 
 Relevant images, HTML file, and CSS stylesheet are included within the repository. The stylesheet and images are contained in the "assets" folder.
 
