@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio | Anthony Rodriguez-Ortiz (@anthonyero)</title>
-  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <!-- <link rel="stylesheet" href="./assets/css/reset.css" /> Was not utilized but could be implemented -->
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
@@ -17,31 +17,29 @@
                 <li> <a href="#about-me">About Me</a></li>
                 <li> <a href="#work">Work</a></li>
                 <li> <a href="#contact-me">Contact Me</a></li>
-                <li> <a href="https://www.linkedin.com/in/anthony-rodriguez-ortiz/">Resume</a></li> <!-- Examine if there is an opportunity to host an online link to a resume. For now, links to LinkedIn -->
+                <li> <a href="https://www.linkedin.com/in/anthony-rodriguez-ortiz/">Resume</a></li> <!-- For now, links to LinkedIn which contains a copy of my resume -->
             </ul>
         </nav>
     </header>
 
-    <!-- Insert Banner Picture here with small subtitle text overlay -->
-
-    <section class = "banner">
+    <section class = "banner"> <!-- Thin banner image was added here -->
         <!-- <p class = "banner-text"> Current student at the Northwestern Coding Bootcamp</p> -->
     </section>
 
     <figure class="headshot">
         <img src="./assets/images/personal_photo.jpg" alt="Personal photo of Anthony Rodriguez-Ortiz" width="50%" height="50%">
     </figure>
-    
+    <!-- Think of each section function as a row/container with two elements: an h2 heading and the section's content -->
     <main>
         <section id="about-me" class="row about-me">
             <h2 class="about-me-heading">About Me</h2>
-            <p> <!-- Assign these paragraphs to appear inline to their respective headers -->
+            <p> <!-- Utilized a line break rather than 2 paragraphs -->
                 My name is Anthony Rodriguez-Ortiz, I am a Research Data Analyst Associate with the Northwestern University, Feinberg School of Medicine. 
                 Primarily, I assist with our social and sexual network data research projects that utilize the internally developed Network Canvas software suite. 
                 Two projects I would like to highlight include a social and sexual network data pilot examining HIV-1 in Ibadan, Nigeria. 
                 The other project is a RADx-UP C3 studying examine COVID-19 behaviors and attitudes in the central United States. 
                 I graduated from the University of Chicago in 2019, where I majored in Public Policy. <br>
-                
+                <br> <!-- Added to provide an empty line -->
                 Currently, I am a student in the Northwestern Coding Boot Camp offered by Northwestern University and edX. My anticipated completion is early June, 2024. 
                 I am interested in utilizing my experience in data analysis and social network research to assist in the development of research software or data analytic tools. 
             </p>
@@ -50,18 +48,19 @@
         <section id="work" class="row work">
             <h2 class="work-heading">Work</h2>
             
-            <section class="projects-container">
+            <section class="projects-container"> <!-- In widescreen orientation: imagine two containers stacked on one another. The main project and a grid of smaller projects below it-->
+                <!-- Main Project Container -->
                 <div class="main-project">
-                    <a href="https://anthonyero.github.io/accessible-webpage/"> <!-- Placing the image in an anchor  -->
+                    <a href="https://anthonyero.github.io/accessible-webpage/"> <!-- Placing the image in an anchor allows the picture to function as a link -->
                         <img class="main-project-image" src="./assets/images/live-accessible-webpage.jpg" alt="Picture of the Live, Accessible Horiseon webpage" width="80%" height="80%">
                     </a>
-                        <p class="main-project-image-text">Accessible webpage <br> HTML & CSS</p>
+                        <p class="main-project-image-text">Accessible webpage <br> HTML / CSS</p>
                 </div>
-
+                <!-- Container with the other projects to demonstrate-->
                 <section class="project-sections">
-                    <div class="project-two card"> <!-- May transition to language like 'card' here for each -->
+                    <div class="project-two card"> <!-- A "card" will become a container that holds the project image and the project's text -->
                         <img class= "card-image" src="./assets/images/placeholder-image.jpg" alt="Placeholder Image for Project two" width="50%" height="50%">
-                            <p class="card-text">Project Two <br> Technology Used</p> <!-- Removed Card class title and subtext -changed to text-->
+                            <p class="card-text">Project Two <br> Technology Used</p> <!-- Condensed card classes "title" and "subtext" to a singular element of class of "card-text" -->
                     </div>
 
                     <div class="project-three card">
