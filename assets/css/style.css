@@ -1,4 +1,4 @@
-
+/* I have defined a few variables that contain recurring color */
 :root {
     --gray-background-color: rgb(55, 56, 66);
     --light-blue-text-color: rgb(153, 225, 225);
@@ -9,10 +9,10 @@
 
 * {
     font-family: sans-serif;
-    box-sizing: border-box; /* This is supposed to let the border determinging */
-    /* Recommends maybe starting. Make CSS based on the wireframe */
+    box-sizing: border-box; /* This is supposed to let the border determine the scaling of the content */
 }
 
+/* Header contains the h1 element and the nav - would like this placed beside one another */
 header {
     /* Layout */
     display: flex;
@@ -29,7 +29,7 @@ header {
 h1 {
     /* Layout */
     display: flex;
-    padding: 1px; /* Provides a bit of cushion along the side so name cut off isn't as sharp*/
+    padding: 1px; /* Provides a bit of cushion along the side so name cut off isn't as sharp */
 
     /* Styling */
     color: var(--gray-background-color);
@@ -38,17 +38,22 @@ h1 {
 }
 
 nav {
+    /* Layout */
     display: flex;
 }
 
 
 nav li {
+    /* Layout */
     display: inline;
-    font-size: 20px;
     padding: 7px;
+    /* Styling */
+    font-size: 20px;
+   
 }
 
 nav li a {
+    /* Styling */ 
     color: var(--light-blue-text-color);
     font-size: larger;
     text-decoration: underline;
@@ -58,15 +63,16 @@ nav li a {
 
 /* Referenced the hero  from the accessible-webpage repository */
 .banner {
-    height: 150px;
-    width: 100%;
-    margin-bottom: 25px;
+    /* Layout */
     background-image: url(https://static.vecteezy.com/system/resources/previews/000/694/606/original/abstract-colorful-geometric-banner-template-background-vector.jpg);
     background-size: cover;
     background-position: center;
+    height: 150px;
+    width: 100%;
+    margin-bottom: 25px;
 }
 
-/* O
+/* Not implemented but may be revisited as another opportunity to add subtext to the banner
 .banner-text{
     height: 100px;
     width: 100%;
@@ -94,6 +100,7 @@ main {
 }
 
 .row {
+    /* Layout */
     display: flex;
     /* align-items: center; Removed because it limited the border height */
     width: 100%;
@@ -102,12 +109,14 @@ main {
 }
 
 .row h2 {
+    /* Layout */
+    padding: 2%;
+    align-items: last baseline;
+    border-right: 2px solid;
+    /* Styling */
+    font-size: 35px;
     color: var(--dark-blue-text-color);
     border-right-color: var(--dark-blue-text-color);
-    border-right: 2px solid;
-    padding: 2%;
-    font-size: 35px;
-    align-items: last baseline;
 }
 
 /* Added to push the about-me heading to the right so they are inlined*/
@@ -117,12 +126,13 @@ main {
 }
 
 .about-me p {
+    /* Layout */
     display: flex;
-    flex-wrap: wrap; /* Allows the pargraph text of about me to wrap as dimensions change*/
-    color: var(--light-gray-text-color);
+    flex-wrap: wrap; /* Allows the paragraph text of about me to wrap as dimensions change*/
     text-wrap: wrap;
-
     padding: 10px;
+    /* Styling */
+    color: var(--light-gray-text-color);
 }
 
 .work {
@@ -136,8 +146,8 @@ main {
     margin-left: 2.1%; 
 }
 
-
 .projects-container {
+    /* Layout*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,7 +156,7 @@ main {
     margin-left: 20%; /* At full scale, this shifts the project container that holds the main project and grid together */
 }
 
-.main-project{
+.main-project {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -178,10 +188,8 @@ main {
 .project-sections {
     display:grid;
     grid-template-columns: 200px 200px;
-    grid-row: auto auto;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
-    position: center;
     flex-wrap: wrap;
 }
 
@@ -194,7 +202,7 @@ main {
 }
 
 
-/* The rationale here is to turn the image itself into a container and then we can place the card-title and card-subtext on top of it*/
+/* The rationale here is to turn the image itself into a container and then we can place the card-title and card-subtext on top of it */
 /* Maybe I need to the placeholder image as a background image for the container */
 .card-image {
     display: flex;
@@ -204,11 +212,12 @@ main {
     gap: 0px;
     width: fit-content;
     height: fit-content;
+    position: relative; 
 
-    flex-grow: 1; /* These lines of code were shared by the Xpert Learning Assistant when I aksed how to maximize the size of an image within a container using CSS flexbox */
+
+    flex-grow: 1; /* These lines of code were shared by the Xpert Learning Assistant when I asked how to maximize the size of an image within a container using CSS flexbox */
     max-width: 100%;
     max-height: 100%;
-    position: relative; 
 
 }
 
@@ -233,8 +242,6 @@ main {
     color: var(--dark-blue-text-color);
     flex-wrap: wrap;
 
-
-    
     /* Although I wanted to implement an underline for these links, letters that have a component that would go under a line (Ex. p, q, y, g) break up the underline
     font-size: larger;
     text-decoration: underline;
@@ -250,6 +257,7 @@ are pushed below onto another line. As such, this is not ideal
 } */
 
 
+/* Adds a light blue border on all images within the sections i.e. excludes headshot */
 .row img {
     border: 4px solid var(--light-blue-text-color);
     filter: grayscale(50%);
@@ -262,7 +270,7 @@ are pushed below onto another line. As such, this is not ideal
 
 
 
-/* Media Query for devices wider than a phone but up to a small tablet*/ 
+/* Media Query for devices wider than a phone but up to a small tablet */ 
 @media screen and (min-width: 431px) and (max-width: 768px) { /* This size was chosen as it is the width of a smaller tablet (iPad Mini)*/
 
     /* Place headers elements as block/stack */
@@ -291,16 +299,16 @@ are pushed below onto another line. As such, this is not ideal
         justify-content: center;
     }
 
+
+    /* Although this secction and .main-project-image have teh same settings, I did not collapse them due to legibility because they were implemented for different reasons */
     .projects-container {
         /* Based on the DevTools, it looks like we do not need to restate properties we want to keep the same. Removed display, flex-direction, etc.*/
         margin-left: 8%; 
     }
 
-
     .main-project-image{
         margin-left: 8%; /* This helped align the main project image so it was in between the grid*/
     }
-
 
     /* Change to a vertical stack of the containers and their children elements */
     .row {
@@ -353,6 +361,20 @@ are pushed below onto another line. As such, this is not ideal
         padding-left: 20%; /* Shifts the paragraph to the right so it is approximately center */
     }
 
+    /* Change to a vertical stack of the containers and their children elements */
+    .row {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    /* Removes the border on the right of the h2 container and places one on the bottom */
+    .row h2 {
+    border-right: 0cap;
+    border-bottom-color: var(--dark-blue-text-color);
+    border-bottom: 2px solid;
+    }
+    
     .work {
         padding-right: 15%;
     }
@@ -378,7 +400,7 @@ are pushed below onto another line. As such, this is not ideal
     
 
     .main-project-image{
-    margin-left: 8%; /* This helped align the main project image so it was in between the grid*/
+    margin-left: 8%; /* This helped align the main project image so it was in between the grid */
     }
 /*
     .project-sections {
@@ -386,18 +408,5 @@ are pushed below onto another line. As such, this is not ideal
 
     }
 */
-    /* Change to a vertical stack of the containers and their children elements */
-    .row {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
 
-    /* Removes the border on the right of the h2 container and places one on the bottom */
-    .row h2 {
-    border-right: 0cap;
-    border-bottom-color: var(--dark-blue-text-color);
-    border-bottom: 2px solid;
-    
-    }
 }
